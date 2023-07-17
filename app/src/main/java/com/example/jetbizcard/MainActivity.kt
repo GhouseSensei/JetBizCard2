@@ -49,7 +49,7 @@ fun CreateBizCard(){
     Surface(modifier = Modifier
         .fillMaxWidth()
         .fillMaxHeight()) {
-        
+
     }
     Card(modifier = Modifier
         .fillMaxWidth()
@@ -62,37 +62,29 @@ fun CreateBizCard(){
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
 
-            ) {
+        ) {
 
             CreateImageProfile()
             Divider()
-            CreateInfo()
-            
+            Column(modifier = Modifier.padding(5.dp)) {
+                Text(text = "Miles Morales",
+                    style = MaterialTheme.typography.h4,
+                    color = MaterialTheme.colors.primaryVariant
+                )
+                Text(text = "Android Compose Programmer",
+                    modifier = Modifier.padding(3.dp)
+                )
+                Text(text = "@moralesmiles",
+                    modifier = Modifier.padding(3.dp),
+                    style = MaterialTheme.typography.subtitle1
+                )
+
+            }
+
         }
     }
 
 
-}
-
-@Composable
-private fun CreateInfo() {
-    Column(modifier = Modifier.padding(5.dp)) {
-        Text(
-            text = "Miles Morales",
-            style = MaterialTheme.typography.h4,
-            color = MaterialTheme.colors.primaryVariant
-        )
-        Text(
-            text = "Android Compose Programmer",
-            modifier = Modifier.padding(3.dp)
-        )
-        Text(
-            text = "@moralesmiles",
-            modifier = Modifier.padding(3.dp),
-            style = MaterialTheme.typography.subtitle1
-        )
-
-    }
 }
 
 @Composable
