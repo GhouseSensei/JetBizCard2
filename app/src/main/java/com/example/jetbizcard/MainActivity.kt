@@ -49,7 +49,7 @@ fun CreateBizCard(){
     Surface(modifier = Modifier
         .fillMaxWidth()
         .fillMaxHeight()) {
-        
+
     }
     Card(modifier = Modifier
         .fillMaxWidth()
@@ -62,12 +62,10 @@ fun CreateBizCard(){
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
 
-            ) {
+        ) {
 
-            CreateImageProfile()
-            Divider()
             CreateInfo()
-            
+
         }
     }
 
@@ -76,6 +74,8 @@ fun CreateBizCard(){
 
 @Composable
 private fun CreateInfo() {
+    CreateImageProfile()
+    Divider()
     Column(modifier = Modifier.padding(5.dp)) {
         Text(
             text = "Miles Morales",
