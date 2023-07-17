@@ -64,6 +64,8 @@ fun CreateBizCard(){
 
         ) {
 
+            CreateImageProfile()
+            Divider()
             CreateInfo()
 
         }
@@ -74,8 +76,6 @@ fun CreateBizCard(){
 
 @Composable
 private fun CreateInfo() {
-    CreateImageProfile()
-    Divider()
     Column(modifier = Modifier.padding(5.dp)) {
         Text(
             text = "Miles Morales",
