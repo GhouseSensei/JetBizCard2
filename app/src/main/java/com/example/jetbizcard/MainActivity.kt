@@ -2,6 +2,7 @@ package com.example.jetbizcard
 
 import android.icu.text.ListFormatter.Width
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.BorderStroke
@@ -64,7 +65,18 @@ fun CreateBizCard(){
 
         ) {
 
+            CreateImageProfile()
+            Divider()
             CreateInfo()
+            Button(
+                onClick = {
+                    Log.d("Clicked", "CreateBizCard: Clicked")
+                }
+            ) {
+                Text(text = "Portfolio",
+                style = MaterialTheme.typography.button)
+
+            }
 
         }
     }
@@ -74,8 +86,6 @@ fun CreateBizCard(){
 
 @Composable
 private fun CreateInfo() {
-    CreateImageProfile()
-    Divider()
     Column(modifier = Modifier.padding(5.dp)) {
         Text(
             text = "Miles Morales",
