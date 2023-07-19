@@ -45,6 +45,26 @@ class MainActivity : ComponentActivity() {
 //    Text(text = "Hello $name!")
 //}
 
+@Preview
+@Composable
+fun Content(){
+    Box(modifier = Modifier
+        .fillMaxHeight()
+        .fillMaxWidth()
+        .padding(5.dp)) {
+        Surface(
+            modifier = Modifier
+                .padding(3.dp)
+                .fillMaxHeight()
+                .fillMaxWidth(),
+            shape = RoundedCornerShape(corner = CornerSize(6.dp)),
+            border = BorderStroke(width = 2.dp, color = Color.LightGray)
+        ) {
+
+        }
+    }
+}
+
 @Composable
 fun CreateBizCard(){
     Surface(modifier = Modifier
@@ -127,7 +147,7 @@ private fun CreateImageProfile(modifier: Modifier = Modifier) {
     }
 }
 
-@Preview(showBackground = true)
+//@Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     JetBizCardTheme {
